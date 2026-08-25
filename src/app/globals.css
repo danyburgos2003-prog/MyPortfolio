@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffdfb;
-  --foreground: #262626;
-  --cream: #faf7f3;
-  --peach: #f6d4c7;
-  --peach-dark: #c97c5d;
-  --sage: #8b9a7d;
-  --border: #ece5df;
+  --linen: #eeebdc;
+  --chocolate: #49261d;
+  --tangelo: #fb4d00;
+  --botticelli: #cae7f7;
+
+  --background: var(--linen);
+  --foreground: var(--chocolate);
 }
 
 html {
@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Inter, Arial, sans-serif;
@@ -22,4 +23,9 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: var(--tangelo);
+  color: white;
 }

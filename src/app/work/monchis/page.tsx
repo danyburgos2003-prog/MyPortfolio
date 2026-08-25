@@ -32,7 +32,7 @@ const galleryImages = [
 
 export default function MonchisPage() {
   return (
-    <main className="min-h-screen bg-[#FFFDFB]">
+    <main className="min-h-screen bg-[#EEEBDC] text-[#49261D]">
       <Navbar />
 
       <CaseHero
@@ -99,7 +99,7 @@ export default function MonchisPage() {
             href="https://www.instagram.com/monchis.mxx"
             target="_blank"
             rel="noreferrer"
-            className="font-medium text-[#C97C5D] underline underline-offset-4"
+            className="font-medium text-[#FB4D00] underline decoration-[#FB4D00]/40 underline-offset-4 transition hover:text-[#49261D]"
           >
             @monchis.mxx
           </a>
@@ -125,30 +125,45 @@ export default function MonchisPage() {
         </p>
       </CaseSection>
 
-      <section className="mx-auto max-w-6xl px-8 py-24">
-        <p className="mb-4 text-sm uppercase tracking-[0.25em] text-[#C97C5D]">
-          Gallery
-        </p>
+      <section className="px-6 py-24 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="border-t border-[#49261D]/15 pt-10">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-[#FB4D00]">
+              Gallery
+            </p>
 
-        <h2 className="max-w-3xl text-4xl font-semibold tracking-tight">
-          Brand identity, packaging, content, and product visuals.
-        </h2>
+            <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">
+              Brand identity, packaging,
+              <span className="block font-serif font-normal italic">
+                content & product visuals.
+              </span>
+            </h2>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {galleryImages.map((image) => (
-            <div
-              key={image.src}
-              className="overflow-hidden rounded-3xl border border-[#ECE5DF] bg-[#FAF7F3] shadow-sm"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={1000}
-                height={800}
-                className="h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
-              />
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {galleryImages.map((image, index) => (
+                <div
+                  key={image.src}
+                  className={
+                    index === 0 || index === 5
+                      ? "relative aspect-[16/9] overflow-hidden rounded-[2rem] bg-[#F7F2E7] md:col-span-2"
+                      : "relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-[#F7F2E7]"
+                  }
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes={
+                      index === 0 || index === 5
+                        ? "(max-width: 768px) 100vw, 1200px"
+                        : "(max-width: 768px) 100vw, 50vw"
+                    }
+                    className="object-cover transition duration-700 hover:scale-[1.03]"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -162,6 +177,21 @@ export default function MonchisPage() {
           details that make people remember the product.
         </p>
       </CaseSection>
+
+      <section className="px-6 pb-12 pt-8 md:px-10 md:pb-16">
+        <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#FB4D00] px-8 py-14 text-[#EEEBDC] md:px-12 md:py-16">
+          <p className="text-xs uppercase tracking-[0.18em] text-[#EEEBDC]/70">
+            Monchi’s
+          </p>
+
+          <h2 className="mt-5 max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-6xl">
+            From a small idea
+            <span className="block font-serif font-normal italic">
+              to a complete brand experience.
+            </span>
+          </h2>
+        </div>
+      </section>
     </main>
   );
 }

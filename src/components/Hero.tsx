@@ -1,33 +1,46 @@
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-8 pt-44 pb-28">
-      <p className="mb-6 text-sm uppercase tracking-[0.25em] text-neutral-500">
-        Information Scientist · Product Builder · Designer
-      </p>
+    <section className="bg-[#EEEBDC] px-6 pb-20 pt-36 text-[#49261D] md:px-10 md:pb-28 md:pt-36">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 flex flex-col gap-4 text-xs font-medium uppercase tracking-[0.18em] md:flex-row md:items-center md:justify-between">
+          <p>Mexico City · 2026</p>
 
-      <h1 className="max-w-5xl text-6xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-        Designing clarity through data, design, and technology.
-      </h1>
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#FB4D00]" />
+            <span>Open to creative + strategic opportunities</span>
+          </div>
+        </div>
 
-      <p className="mt-10 max-w-2xl text-xl leading-9 text-neutral-600">
-        I build products and experiences that transform complex information
-        into intuitive, human-centered solutions.
-      </p>
+        <div className="max-w-6xl">
+          <h1 className="text-[clamp(4rem,8.5vw,8rem)] font-semibold uppercase leading-[0.84] tracking-[-0.055em]">
+            Creative
+            <span className="block font-serif text-[0.8em] font-normal italic normal-case tracking-[-0.04em]">
+              strategist &
+            </span>
+            Digital Builder
+          </h1>
+        </div>
 
-      <div className="mt-12 flex gap-4">
-        <a
-          href="#work"
-          className="rounded-full bg-[#262626] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#C97C5D]"
-        >
-          View selected work
-        </a>
+        <div className="mt-12 grid gap-10 border-t border-[#49261D]/20 pt-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+          <p className="max-w-xl text-lg leading-8 md:text-xl">
+            I turn ideas, information, and stories into thoughtful digital
+            experiences, brands, and strategies.
+          </p>
 
-        <a
-          href="#contact"
-          className="rounded-full border border-[#ECE5DF] px-6 py-3 text-sm font-medium transition hover:border-[#C97C5D] hover:text-[#C97C5D]"
-        >
-          Contact me
-        </a>
+          <div className="md:text-right">
+            <p className="text-sm uppercase leading-7 tracking-[0.16em]">
+              Strategy · Design · Data · Digital
+            </p>
+
+            <a
+              href="#work"
+              className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#49261D] px-6 py-3 text-sm font-medium text-[#EEEBDC] transition duration-300 hover:bg-[#FB4D00]"
+            >
+              Explore selected work
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -40,7 +40,7 @@ const posters = [
 
 export default function BurgoByDanielaPage() {
   return (
-    <main className="min-h-screen bg-[#FFFDFB]">
+    <main className="min-h-screen bg-[#EEEBDC] text-[#49261D]">
       <Navbar />
 
       <CaseHero
@@ -85,6 +85,49 @@ export default function BurgoByDanielaPage() {
         </p>
       </CaseSection>
 
+      <section className="px-6 py-8 md:px-10">
+        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">
+          {[
+            {
+              number: "01",
+              title: "Typography",
+              text: "Using type as both information and visual personality.",
+            },
+            {
+              number: "02",
+              title: "Composition",
+              text: "Exploring hierarchy, balance, spacing, and visual rhythm.",
+            },
+            {
+              number: "03",
+              title: "Story",
+              text: "Turning everyday inspiration into pieces with a point of view.",
+            },
+          ].map((item, index) => (
+            <div
+              key={item.number}
+              className={
+                index === 0
+                  ? "rounded-[1.75rem] bg-[#CAE7F7] p-7"
+                  : index === 1
+                    ? "rounded-[1.75rem] bg-[#FB4D00] p-7 text-[#EEEBDC]"
+                    : "rounded-[1.75rem] bg-[#49261D] p-7 text-[#EEEBDC]"
+              }
+            >
+              <p className="text-xs uppercase tracking-[0.18em] opacity-60">
+                {item.number}
+              </p>
+
+              <h3 className="mt-10 text-3xl font-semibold tracking-[-0.04em]">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 leading-7 opacity-75">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <CaseSection
         eyebrow="Process"
         title="Using posters as a way to practice creative direction."
@@ -97,35 +140,50 @@ export default function BurgoByDanielaPage() {
 
         <p>
           Through BurgoByDaniela, I am building a creative practice that allows
-          me to keep experimenting, producing, and developing a stronger point of
-          view as a designer.
+          me to keep experimenting, producing, and developing a stronger point
+          of view as a designer.
         </p>
       </CaseSection>
 
-      <section className="mx-auto max-w-6xl px-8 py-24">
-        <p className="mb-4 text-sm uppercase tracking-[0.25em] text-[#C97C5D]">
-          Gallery
-        </p>
+      <section className="px-6 py-24 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="border-t border-[#49261D]/15 pt-10">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-[#FB4D00]">
+              Gallery
+            </p>
 
-        <h2 className="max-w-3xl text-4xl font-semibold tracking-tight">
-          Selected poster designs and visual experiments.
-        </h2>
+            <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">
+              Selected poster designs
+              <span className="block font-serif font-normal italic">
+                & visual experiments.
+              </span>
+            </h2>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {posters.map((poster) => (
-            <div
-              key={poster.src}
-              className="overflow-hidden rounded-3xl border border-[#ECE5DF] bg-[#FAF7F3] shadow-sm"
-            >
-              <Image
-                src={poster.src}
-                alt={poster.alt}
-                width={600}
-                height={900}
-                className="h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
-              />
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {posters.map((poster, index) => (
+                <div
+                  key={poster.src}
+                  className={
+                    index === 0 || index === 5
+                      ? "relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#F7F2E7] sm:col-span-2"
+                      : "relative aspect-[2/3] overflow-hidden rounded-[2rem] bg-[#F7F2E7]"
+                  }
+                >
+                  <Image
+                    src={poster.src}
+                    alt={poster.alt}
+                    fill
+                    sizes={
+                      index === 0 || index === 5
+                        ? "(max-width: 768px) 100vw, 50vw"
+                        : "(max-width: 768px) 100vw, 25vw"
+                    }
+                    className="object-cover transition duration-700 hover:scale-[1.03]"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -139,6 +197,21 @@ export default function BurgoByDanielaPage() {
           relationship with design, creative direction, and visual storytelling.
         </p>
       </CaseSection>
+
+      <section className="px-6 pb-12 pt-8 md:px-10 md:pb-16">
+        <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#49261D] px-8 py-14 text-[#EEEBDC] md:px-12 md:py-16">
+          <p className="text-xs uppercase tracking-[0.18em] text-[#FB4D00]">
+            BurgoByDaniela
+          </p>
+
+          <h2 className="mt-5 max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-6xl">
+            A space to experiment,
+            <span className="block font-serif font-normal italic">
+              make & develop a point of view.
+            </span>
+          </h2>
+        </div>
+      </section>
     </main>
   );
 }
