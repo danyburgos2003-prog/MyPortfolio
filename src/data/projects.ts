@@ -58,11 +58,11 @@ export const projects: Project[] = [
   },
   {
     number: "05",
-    title: "BurgoByDaniela",
-    category: "Creative Direction · Visual Design",
+    title: "EntreManos",
+    category: "Brand Identity · Web Development · Digital Marketing",
     description:
-      "An independent creative practice exploring poster design, visual communication, typography, and everyday inspiration.",
-    image: "/images/burgobydaniela/preview.png",
+      "A client project for a creative workshops and experiences brand, combining brand identity design, a custom-built website, and social media strategy to establish a cohesive digital presence.",
+    image: "/images/entremanos/preview.png",
     type: "case-study",
     theme: "brown",
     layout: "large",

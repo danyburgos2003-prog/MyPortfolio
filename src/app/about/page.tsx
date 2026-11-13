@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
@@ -17,7 +18,7 @@ export default function AboutPage() {
               <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
                 I build at the intersection of
                 <span className="block font-serif font-normal italic">
-                  strategy, design, data & story.
+                  technology, data & design.
                 </span>
               </h1>
             </div>
@@ -74,51 +75,65 @@ export default function AboutPage() {
 
             <div className="rounded-[2rem] bg-[#F7F2E7] p-8 md:p-12">
               <p className="text-xs uppercase tracking-[0.18em] text-[#FB4D00]">
-                Hi, I’m Daniela
+                Hi, I&apos;m Daniela
               </p>
 
               <div className="mt-8 space-y-7 text-lg leading-8 text-[#49261D]/75 md:text-xl md:leading-9">
                 <p>
-                  I’m an Information Science graduate, designer, strategist, and
-                  former NCAA Division I athlete. My work lives where technology,
-                  visual communication, data, and storytelling meet.
+                  I&apos;m an Information Science graduate from the
+                  University of Maryland and a former NCAA Division I
+                  student-athlete, with a passion for building digital
+                  products and solving problems through technology and data.
                 </p>
 
                 <p>
-                  I enjoy taking complex ideas and turning them into experiences
-                  that feel clear, thoughtful, and useful. That might mean
-                  designing a website, building a dashboard, shaping a brand, or
-                  creating a product from the ground up.
+                  I enjoy understanding how things work, identifying
+                  opportunities for improvement, and turning complex ideas
+                  into practical solutions. Whether I&apos;m developing a
+                  website, analyzing data, or designing a digital experience,
+                  I&apos;m motivated by creating things that are both
+                  functional and meaningful.
                 </p>
 
                 <p>
-                  My background in competitive golf has shaped the way I work.
-                  Years of competing at the Division I level taught me discipline,
-                  resilience, preparation, and the value of continuous
-                  improvement.
+                  My experience spans web development, brand strategy,
+                  marketing analytics, and entrepreneurship. Working on
+                  projects for real businesses has strengthened my interest
+                  in the relationship between technical execution, user
+                  needs, and business objectives.
                 </p>
 
                 <p>
-                  Today, I’m especially interested in creative strategy, digital
-                  experiences, branding, data-driven decision making, and work
-                  that brings together strong ideas with strong execution.
+                  My background in competitive golf has shaped the way I
+                  work. Years of competing at the Division I level taught
+                  me discipline, resilience, preparation, and the value
+                  of continuous improvement.
+                </p>
+
+                <p>
+                  Today, I&apos;m pursuing opportunities in Software
+                  Engineering and Business Analytics while continuing to
+                  develop my skills in programming, data analysis, and
+                  product development. Long term, I&apos;m interested in
+                  building and leading technology products that solve
+                  real problems.
                 </p>
               </div>
 
               <div className="mt-10 border-t border-[#49261D]/15 pt-8">
                 <p className="text-xs uppercase tracking-[0.18em] text-[#49261D]/50">
-                  Areas I enjoy working in
+                  Areas I&apos;m exploring & developing
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-3">
                   {[
-                    "Brand Strategy",
-                    "Web Design",
-                    "UX/UI",
-                    "Data Visualization",
-                    "Digital Products",
-                    "Creative Direction",
-                    "Storytelling",
+                    "Software Development",
+                    "Web Development",
+                    "Data Analytics",
+                    "Product Development",
+                    "SQL & Databases",
+                    "Business Strategy",
+                    "UX/UI Design",
                     "Entrepreneurship",
                   ].map((item) => (
                     <span
@@ -153,23 +168,25 @@ export default function AboutPage() {
               {
                 number: "01",
                 title: "Understand",
-                text: "Start with the problem, the people, and the context before jumping into a solution.",
+                text: "Explore the problem, analyze information, and identify what matters before choosing a solution.",
               },
               {
                 number: "02",
                 title: "Build",
-                text: "Turn ideas into tangible systems, products, visuals, and digital experiences.",
+                text: "Translate ideas into functional applications, analytical solutions, and thoughtful digital experiences.",
               },
               {
                 number: "03",
                 title: "Refine",
-                text: "Test, iterate, and improve until the work feels both useful and intentional.",
+                text: "Test, evaluate results, and improve through feedback, iteration, and continuous learning.",
               },
             ].map((item, index) => (
               <div
                 key={item.number}
                 className={`border-b border-[#EEEBDC]/20 py-9 md:px-8 ${
-                  index > 0 ? "md:border-l md:border-l-[#EEEBDC]/20" : "md:pl-0"
+                  index > 0
+                    ? "md:border-l md:border-l-[#EEEBDC]/20"
+                    : "md:pl-0"
                 }`}
               >
                 <p className="text-xs tracking-[0.18em] text-[#FB4D00]">
@@ -208,7 +225,8 @@ export default function AboutPage() {
               </p>
 
               <p className="max-w-xs text-3xl font-semibold leading-tight tracking-[-0.04em]">
-                I move comfortably between analytical and creative thinking.
+                I connect technical problem-solving with analytical and
+                creative thinking.
               </p>
             </div>
 
@@ -228,13 +246,13 @@ export default function AboutPage() {
       <section className="px-6 pb-12 md:px-10 md:pb-16">
         <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#FB4D00] px-8 py-16 text-[#EEEBDC] md:px-14 md:py-20">
           <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em]">
-            What’s Next
+            What&apos;s Next
           </p>
 
           <h2 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
             Interested in working together?
             <span className="block font-serif font-normal italic">
-              I’d love to connect.
+              I&apos;d love to connect.
             </span>
           </h2>
 

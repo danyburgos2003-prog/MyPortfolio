@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </p>
 
                 <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.04em]">
-                  Roles in strategy, digital, branding, data & media.
+                  Software Engineering, Data & Business Analytics, and Product Development.
                 </h2>
               </div>
             </a>

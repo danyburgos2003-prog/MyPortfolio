@@ -16,7 +16,7 @@ const projectLinks: Record<string, string> = {
   Tempo: "tempo",
   "Maroon PR Analytics Dashboard": "maroon-pr",
   "Monchi’s": "monchis",
-  BurgoByDaniela: "burgobydaniela",
+  EntreManos: "entremanos",
 };
 
 const themeStyles = {
