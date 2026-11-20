@@ -1,3 +1,4 @@
+
 export default function Hero() {
   return (
     <section className="bg-[#EEEBDC] px-6 pb-20 pt-36 text-[#49261D] md:px-10 md:pb-28 md:pt-36">
@@ -7,29 +8,30 @@ export default function Hero() {
 
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#FB4D00]" />
-            <span>Open to creative + strategic opportunities</span>
+            <span>Open to product + analytics opportunities</span>
           </div>
         </div>
 
         <div className="max-w-6xl">
           <h1 className="text-[clamp(4rem,8.5vw,8rem)] font-semibold uppercase leading-[0.84] tracking-[-0.055em]">
-            Creative
+            Product &
             <span className="block font-serif text-[0.8em] font-normal italic normal-case tracking-[-0.04em]">
-              strategist &
+              analytics
             </span>
-            Digital Builder
+            Strategy
           </h1>
         </div>
 
         <div className="mt-12 grid gap-10 border-t border-[#49261D]/20 pt-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <p className="max-w-xl text-lg leading-8 md:text-xl">
-            I turn ideas, information, and stories into thoughtful digital
-            experiences, brands, and strategies.
+            I turn data, ideas, and user insights into meaningful
+            products, informed decisions, and thoughtful digital
+            experiences.
           </p>
 
           <div className="md:text-right">
             <p className="text-sm uppercase leading-7 tracking-[0.16em]">
-              Strategy · Design · Data · Digital
+              Product · Analytics · Business · Technology
             </p>
 
             <a

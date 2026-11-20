@@ -34,15 +34,17 @@ export default function Home() {
                 </h2>
 
                 <p className="mt-8 max-w-xl text-lg leading-8 text-[#49261D]/75">
-                  I’m an Information Science graduate, former NCAA Division I
-                  athlete, designer, and strategist working at the intersection
-                  of technology, storytelling, data, and brand.
+                  I’m an Information Science graduate from the University of
+                  Maryland and former NCAA Division I student-athlete with a
+                  passion for analytics, product development, and business
+                  strategy.
                 </p>
 
                 <p className="mt-5 max-w-xl text-lg leading-8 text-[#49261D]/75">
-                  I enjoy turning ideas and complex information into digital
-                  experiences that feel clear, useful, thoughtful, and
-                  memorable.
+                  My experience spans data analysis, market research, and
+                  digital product development. I enjoy connecting data,
+                  technology, and user needs to uncover opportunities,
+                  solve problems, and build meaningful digital experiences.
                 </p>
               </div>
 
@@ -77,7 +79,7 @@ export default function Home() {
                 />
 
                 <div className="absolute bottom-5 right-5 rounded-full bg-[#FB4D00] px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-[#EEEBDC]">
-                  Strategy · Design · Digital
+                  Product · Analytics · Strategy
                 </div>
               </div>
             </div>
@@ -94,7 +96,7 @@ export default function Home() {
               </p>
 
               <h2 className="max-w-3xl text-4xl font-semibold leading-[0.95] tracking-[-0.045em] md:text-6xl">
-                Projects across strategy,
+                Projects across product,
                 <span className="block font-serif font-normal italic">
                   design, data & digital.
                 </span>
@@ -146,34 +148,34 @@ export default function Home() {
           </p>
 
           <h2 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-            Strategy, design, and digital thinking.
+            Where data, product, and creativity connect.
           </h2>
 
           <div className="mt-16 grid border-t border-[#EEEBDC]/20 md:grid-cols-2">
             {[
               {
                 number: "01",
-                title: "Brand & Strategy",
+                title: "Data & Analytics",
                 description:
-                  "Brand positioning, storytelling, campaigns, and creative direction.",
+                  "SQL, Python, KPI analysis, data visualization, and insights that support informed decisions.",
               },
               {
                 number: "02",
-                title: "Digital Experiences",
+                title: "Product Development",
                 description:
-                  "Web design, UX/UI, and digital products designed around real users.",
+                  "Product research, user-centered thinking, and building thoughtful digital experiences.",
               },
               {
                 number: "03",
-                title: "Data & Insights",
+                title: "Business & Strategy",
                 description:
-                  "Analytics, visualization, and strategic decision-making.",
+                  "Market research, competitive analysis, and identifying opportunities for growth.",
               },
               {
                 number: "04",
-                title: "Content & Communication",
+                title: "Brand & Creative Development",
                 description:
-                  "Visual storytelling, media, and digital communication.",
+                  "Brand identity, visual storytelling, digital design, and creative direction.",
               },
             ].map((item) => (
               <div
@@ -211,29 +213,48 @@ export default function Home() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              "NCAA DIVISION I ATHLETE",
-              "MEXICO CITY",
-              "INFORMATION SCIENCE",
-              "GOLF SINCE AGE 5",
-              "DESIGN + TECHNOLOGY",
-              "STRATEGY + STORYTELLING",
-            ].map((item, index) => (
+              {
+                title: "NCAA DIVISION I ATHLETE",
+                background: "bg-[#49261D]",
+                text: "text-[#EEEBDC]",
+              },
+              {
+                title: "PRODUCT + ANALYTICS",
+                background: "bg-[#CAE7F7]",
+                text: "text-[#49261D]",
+              },
+              {
+                title: "INFORMATION SCIENCE",
+                background: "bg-[#FFF8F3]",
+                text: "text-[#49261D]",
+              },
+              {
+                title: "GOLF SINCE AGE 5",
+                background: "bg-[#FFF8F3]",
+                text: "text-[#49261D]",
+              },
+              {
+                title: "DESIGN + TECHNOLOGY",
+                background: "bg-[#FB4D00]",
+                text: "text-[#FFF8F3]",
+              },
+              {
+                title: "STRATEGY + CREATIVITY",
+                background: "bg-[#49261D]",
+                text: "text-[#CAE7F7]",
+              },
+            ].map((item) => (
               <div
-                key={item}
-                className={
-                  index === 1 || index === 4
-                    ? "flex min-h-56 items-end rounded-[1.75rem] bg-[#FB4D00] p-7 text-[#EEEBDC]"
-                    : index === 2
-                    ? "flex min-h-56 items-end rounded-[1.75rem] bg-[#CAE7F7] p-7"
-                    : "flex min-h-56 items-end rounded-[1.75rem] bg-[#FFF8F3] p-7"
-                }
+                key={item.title}
+                className={`flex min-h-56 items-end rounded-[1.75rem] p-7 ${item.background} ${item.text}`}
               >
                 <p className="max-w-xs text-2xl font-semibold leading-tight tracking-[-0.03em]">
-                  {item}
+                  {item.title}
                 </p>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
